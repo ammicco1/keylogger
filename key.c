@@ -5,7 +5,7 @@ keys *initialize_keys(){
     int i;
     keys *key = (keys *) malloc(sizeof(keys));
 
-    key -> ch = (char **) malloc((sizeof(char) * 2 * 39) + (sizeof(char) * 5) + (sizeof(char) * 6 * 3) + (sizeof(char) * 8 * 2) + (sizeof(char) * 9 * 2) + (sizeof(char) * 11));
+    key -> ch = (char **) malloc((sizeof(char) * 2 * 39) + (sizeof(char) * 7 * 3) + (sizeof(char) * 6 * 3) + (sizeof(char) * 8 * 2) + (sizeof(char) * 9 * 3) + (sizeof(char) * 12));
 
     for(i = 0; i < 48; i++){
         switch(i){
@@ -48,15 +48,15 @@ keys *initialize_keys(){
             case 36: key -> id[i] = 11; key -> ch[i] = (char *) malloc(sizeof(char) * 2); key -> ch[i] = "0"; key -> len[i] = 2; break;
             case 37: key -> id[i] = 42; key -> ch[i] = (char *) malloc(sizeof(char) * 9); key -> ch[i] = " MAIUSC "; key -> len[i] = 9; break;
             case 38: key -> id[i] = 57; key -> ch[i] = (char *) malloc(sizeof(char) * 2); key -> ch[i] = " "; key -> len[i] = 2; break; 
-            case 39: key -> id[i] = 14; key -> ch[i] = (char *) malloc(sizeof(char) * 5); key -> ch[i] = " DEL "; key -> len[i] = 5; break;
-            case 40: key -> id[i] = 58; key -> ch[i] = (char *) malloc(sizeof(char) * 11); key -> ch[i] = " CAPS LOCK "; key -> len[i] = 11; break; 
-            case 41: key -> id[i] = 29; key -> ch[i] = (char *) malloc(sizeof(char) * 6); key -> ch[i] = " CTRL "; key -> len[i] = 6; break;
+            case 39: key -> id[i] = 14; key -> ch[i] = (char *) malloc(sizeof(char) * 6); key -> ch[i] = " DEL "; key -> len[i] = 5; break;
+            case 40: key -> id[i] = 58; key -> ch[i] = (char *) malloc(sizeof(char) * 12); key -> ch[i] = " CAPS LOCK "; key -> len[i] = 11; break; 
+            case 41: key -> id[i] = 29; key -> ch[i] = (char *) malloc(sizeof(char) * 7); key -> ch[i] = " CTRL "; key -> len[i] = 6; break;
             case 42: key -> id[i] = 54; key -> ch[i] = (char *) malloc(sizeof(char) * 9); key -> ch[i] = " MAIUSC "; key -> len[i] = 9; break; 
-            case 43: key -> id[i] = 111; key -> ch[i] = (char *) malloc(sizeof(char) * 6); key -> ch[i] = " CANC "; key -> len[i] = 6; break;
+            case 43: key -> id[i] = 111; key -> ch[i] = (char *) malloc(sizeof(char) * 7); key -> ch[i] = " CANC "; key -> len[i] = 6; break;
             case 44: key -> id[i] = 52; key -> ch[i] = (char *) malloc(sizeof(char) * 2); key -> ch[i] = "."; key -> len[i] = 2; break;
             case 45: key -> id[i] = 51; key -> ch[i] = (char *) malloc(sizeof(char) * 2); key -> ch[i] = ","; key -> len[i] = 2; break;
-            case 46: key -> id[i] = 100; key -> ch[i] = (char *) malloc(sizeof(char) * 8); key -> ch[i] = " ALT GR "; key -> len[i] = 8; break;
-            case 47: key -> id[i] = 97; key -> ch[i] = (char *) malloc(sizeof(char) * 6); key -> ch[i] = " CTRL "; key -> len[i] = 6; break;
+            case 46: key -> id[i] = 100; key -> ch[i] = (char *) malloc(sizeof(char) * 9); key -> ch[i] = " ALT GR "; key -> len[i] = 8; break;
+            case 47: key -> id[i] = 97; key -> ch[i] = (char *) malloc(sizeof(char) * 7); key -> ch[i] = " CTRL "; key -> len[i] = 6; break;
         } 
     }
 
