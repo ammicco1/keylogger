@@ -1,5 +1,5 @@
 logger: main.o keylogger.o key.o
-	gcc -o logger main.o keylogger.o key.o
+	gcc -o logger main.o keylogger.o key.o 
 
 main.o: main.c
 	gcc -c main.c

@@ -57,7 +57,7 @@ int logger(){
 
 int w_log(char *path, char *str){
     FILE *f = fopen(path, "a+");
-    
+
     if(!f){
         return -1;
     }
