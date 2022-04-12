@@ -10,7 +10,7 @@ echo "${VIOLET}  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 printf "\n  author: AMMICCO (https://github.com/ammicco1)\n\n"
 echo "  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 
-printf "${BO}\n    THE LOG FILE WILL BE CREATED IN THIS\n"
+printf "${BLUE}\n    THE LOG FILE WILL BE CREATED IN THIS\n"
 printf "    DIRECTORY, EDIT THE keylogger.c FILE TO\n" 
 printf "    CHANGE THE PATH OF THE LOG FILE\n"
 
